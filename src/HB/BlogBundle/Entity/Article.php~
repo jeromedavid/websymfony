@@ -70,6 +70,20 @@ class Article
      */
     private $enabled;
 
+    
+    /**
+     *
+     * @var User
+     * @ORM\ManyToOne(targetEntity="User")
+     */
+    private $author;
+    
+    
+    
+    
+    
+    
+    
     /**
      * Get id
      *
@@ -216,5 +230,51 @@ class Article
     public function getPublished()
     {
         return $this->published;
+    }
+
+    /**
+     * Set enabled
+     *
+     * @param boolean $enabled
+     * @return Article
+     */
+    public function setEnabled($enabled)
+    {
+        $this->enabled = $enabled;
+
+        return $this;
+    }
+
+    /**
+     * Get enabled
+     *
+     * @return boolean 
+     */
+    public function getEnabled()
+    {
+        return $this->enabled;
+    }
+
+    /**
+     * Set author
+     *
+     * @param \HB\BlogBundle\Entity\User $author
+     * @return Article
+     */
+    public function setAuthor(\HB\BlogBundle\Entity\User $author = null)
+    {
+        $this->author = $author;
+
+        return $this;
+    }
+
+    /**
+     * Get author
+     *
+     * @return \HB\BlogBundle\Entity\User 
+     */
+    public function getAuthor()
+    {
+        return $this->author;
     }
 }
