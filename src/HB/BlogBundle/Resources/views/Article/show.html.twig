@@ -37,9 +37,17 @@
                 <th>Enabled</th>
                 <td>{{ entity.enabled }}</td>
             </tr>
+            <tr>
+                <th>Nom (Login) de l'auteur</th>
+                <td>{{ entity.author.NameLogin }}</td>
+            </tr>            
         </tbody>
     </table>
 
+
+            
+            
+            
         <ul class="record_actions">
     <li>
         <a href="{{ path('article') }}">

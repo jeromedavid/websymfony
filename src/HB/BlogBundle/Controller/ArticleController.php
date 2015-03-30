@@ -99,6 +99,9 @@ class ArticleController extends Controller
         );
     }
 
+    
+    
+    
     /**
      * Finds and displays a Article entity.
      *

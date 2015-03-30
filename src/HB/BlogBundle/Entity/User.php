@@ -77,7 +77,12 @@ class User
      */
     private $birthDate;
     
-
+    /**
+     *
+     * @var Article[]
+     * @ORM\OneToMany(targetEntity="Article", mappedBy="author")
+     */
+    private $articles;
 
     /**
      * Get id
@@ -112,6 +117,16 @@ class User
         return $this->name;
     }
 
+    /**
+     * Get nameLogin (getter personnalisé)
+     *
+     * @return string 
+     */
+    public function getNameLogin()
+    {
+        return $this->name." (".$this->login.")";
+    }    
+    
     /**
      * Set email
      *
@@ -271,5 +286,47 @@ class User
     public function getBirthDate()
     {
         return $this->birthDate;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->articles = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add article
+     *
+     * @param \HB\BlogBundle\Entity\Article $article
+     * @return User
+     */
+    public function addArticle(\HB\BlogBundle\Entity\Article $article)
+    {
+        $article->setAuthor($this);        
+        $this->articles[] = $article;
+
+        return $this;
+    }
+
+    /**
+     * Remove article
+     *
+     * @param \HB\BlogBundle\Entity\Article $article
+     */
+    public function removeArticle(\HB\BlogBundle\Entity\Article $article)
+    {
+        $article->setAuthor(null);
+        $this->articles->removeElement($article);
+    }
+
+    /**
+     * Get articles
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getArticles()
+    {
+        return $this->articles;
     }
 }
