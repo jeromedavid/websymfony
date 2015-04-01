@@ -52,14 +52,14 @@ class User
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="creationDate", type="datetime")
+     * @ORM\Column(name="creationDate", type="datetime", nullable=true)
      */
     private $creationDate;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="lastEditDate", type="datetime")
+     * @ORM\Column(name="lastEditDate", type="datetime", nullable=true)
      */
     private $lastEditDate;
 
