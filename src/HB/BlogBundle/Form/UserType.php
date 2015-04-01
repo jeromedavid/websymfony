@@ -16,13 +16,25 @@ class UserType extends AbstractType
     {
         $builder
             ->add('name')
-            ->add('email')
+            ->add('email','repeated', array(
+                    'type' => 'email',
+                    'invalid_message' => 'Les adresses eMail doivent correspondre',
+                    'options' => array('required'=>true),
+                    'first_options' => array('label'=>'EMail'),
+                    'second_options' => array('label'=>'EMail (confirmer)')
+                ))
             ->add('login')
-            ->add('password')
-            ->add('creationDate')
+            ->add('password','repeated', array(
+                    'type' => 'password',
+                    'invalid_message' => 'Les mots de passe doivent correspondre',
+                    'options' => array('required'=>true),
+                    'first_options' => array('label'=>'Password'),
+                    'second_options' => array('label'=>'Password (confirmer)')
+                ))
+            ->add('creationDate','datetime', array('years'=>  range(date('Y')-20, date('Y'))))
             ->add('lastEditDate')
-            ->add('enabled')
-            ->add('birthDate')
+            ->add('enabled', 'checkbox', array('required'=>false))
+            ->add('birthDate','birthday')
         ;
     }
     
