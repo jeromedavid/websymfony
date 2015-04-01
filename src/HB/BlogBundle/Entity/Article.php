@@ -96,6 +96,23 @@ class Article
     private $author;
     
     
+    /**
+     *
+     * @var Image
+     * @ORM\OneToOne(targetEntity="Image",cascade="persist")
+     * 
+     */
+    private $banner;
+    
+    function getBanner() {
+        return $this->banner;
+    }
+
+    function setBanner(Image $banner) {
+        $this->banner = $banner;
+    }
+
+        
     public function __construct() {
         //Valeur par défaut (pour le formulaire)
         $this->creationDate = new \DateTime();

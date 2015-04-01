@@ -84,6 +84,8 @@ class User
      */
     private $articles;
 
+    
+    
     /**
      * Get id
      *

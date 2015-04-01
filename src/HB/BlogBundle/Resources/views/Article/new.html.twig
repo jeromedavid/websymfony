@@ -8,30 +8,63 @@
 
 
 
-{{ form_start(form, {'attr': {'class': ''},'attr': {'role': 'form'}}) }}
+{{ form_start(form, {'attr': {'class': ''}}) }}
     
-  
-    <div class="form-group">
-    {{ form_row(form.title, {'attr': {'class': 'input-medium search-query'}}) }}
+<h3>Article</h3>
+<div class="form-wrapper">  
+    
+    <table>
+        <tr>
+            <td>{{ form_label(form.title) }}</td>
+            <td>{{ form_widget(form.title, {'attr': {'class': 'boiteinput'}}) }}</td>
+        </tr>
+        <tr>
+            <td>{{ form_label(form.content) }} </td>
+            <td>{{ form_widget(form.content, {'attr': {'class': 'boiteinput'},'attr': {'style': 'width:100%'},'attr': {'rows': '10'}}) }}</td>
+        </tr>
+        <tr>
+            <td>{{ form_label(form.published) }}</td>
+            <td>{{ form_widget(form.published, {'attr': {'class': 'lcs_check'}}) }}</td>
+        </tr>
+        <tr>
+            <td>{{ form_label(form.enabled) }} </td>
+            <td>{{ form_widget(form.enabled, {'attr': {'class': 'lcs_check'}}) }}</td>
+        </tr>        
+        <tr>
+            <td>{{ form_label(form.publishDate) }} </td>
+            <td>{{ form_widget(form.publishDate, {'attr': {'class': 'MonDateTimePicker'}}) }}</td>
+        </tr>
+    </table>
+</div>   
+<br>    
+<h3>Image de l'article</h3>    
+<div class="form-wrapper">  
+    <table>
+        <tr>
+            <td>{{ form_label(form.banner.title) }} </td>
+            <td>{{ form_widget(form.banner.title, {'attr': {'class': 'boiteinput'}}) }}</td>
+        </tr>
+        <tr>
+            <td>{{ form_label(form.banner.alt) }}</td>
+            <td>{{ form_widget(form.banner.alt, {'attr': {'class': 'boiteinput'}}) }}</td>
+        </tr>        
+        <tr>
+            <td>{{ form_label(form.banner.url) }} </td>
+            <td>{{ form_widget(form.banner.url, {'attr': {'class': 'boiteinput'}}) }}</td>
+        </tr>
+    </table>    
+
+</div>
+    <div>
+    {{ form_widget(form.submit, {'attr': {'class': ''}}) }}
     </div>
 
-{#    <div style="text-align: center; background-color: blue">
-    {{ form_errors(form.content) }}
-    </div>#}
-
-    {{ form_row(form.content) }}
-
     
-    
-    {{ form_row(form.publishDate) }}
-    
-
-    {{ form_row(form.submit, {'attr': {'class': 'btn btn-primary'}}) }}
-
-
-    
-    
+{#{{ form_end(form) }}  #}  
 {{ form_end(form, {'render_rest': false})  }}
+
+
+
 
 
         <ul class="record_actions">
