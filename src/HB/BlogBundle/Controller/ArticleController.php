@@ -48,6 +48,16 @@ class ArticleController extends Controller {
      * @Template()
      */
     public function newAction() {
+        
+        if (!$this->get('security.context')->isGranted("ROLE_USER")) {
+            $this->addFlash(
+                    'error',
+                    'Vous devez être connecté pour ajouter un article !'
+                    );
+        }
+            return $this->redirect($this->generateUrl("home"));
+        
+        
         // on crée un nouvel objet article vierge
         $entity = new Article();
         // on génère un formulaire à partir de cet article

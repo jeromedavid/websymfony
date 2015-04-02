@@ -21,8 +21,8 @@ class UserController extends Controller
     /**
      * Lists all User entities.
      *
-     * @Route("/", name="user")
-     * @Method("GET")
+     * @Route("/user", name="user")
+     * Method("GET")
      * @Template()
      */
     public function indexAction()
@@ -244,4 +244,5 @@ class UserController extends Controller
             ->getForm()
         ;
     }
+    
 }

@@ -5,221 +5,230 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
     {% block stylesheets %}{% endblock %}
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('siteweb/css/bootstrap.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('siteweb/jquery-ui/jquery-ui.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('siteweb/css/bonbon_buttons.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('siteweb/Toggle_Switch/lc_switch.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('siteweb/datetimepicker-master/jquery.datetimepicker.css')}}">
 
     <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-    
+
     <style type="text/css">
 
-body {
-  background: #eee;
-  font: 10px Lucida sans, Arial, Helvetica, sans-serif;
-	color: #333;
-
-}
-
-a {
-	color: #2A679F;
-}
-
-
-.form-wrapper {
-	background-color: #f6f6f6;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#eae8e8));
-	background-image: -webkit-linear-gradient(top, #f6f6f6, #eae8e8);
-	background-image: -moz-linear-gradient(top, #f6f6f6, #eae8e8);
-	background-image: -ms-linear-gradient(top, #f6f6f6, #eae8e8);
-	background-image: -o-linear-gradient(top, #f6f6f6, #eae8e8);
-	background-image: linear-gradient(top, #f6f6f6, #eae8e8);
-	border-color: #dedede #bababa #aaa #bababa;
-	border-style: solid;
-	border-width: 1px;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	border-radius: 10px;
-	-webkit-box-shadow: 0 3px 3px rgba(255,255,255,.1), 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 5px #444;
-	-moz-box-shadow: 0 3px 3px rgba(255,255,255,.1), 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 5px #444;
-	box-shadow: 0 3px 3px rgba(255,255,255,.1), 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 5px #444;
-	margin: 20px auto;
-	overflow: hidden;
-	padding: 8px;
-	width: 450px;
-}
-
-.form-wrapper .boiteinput {
-	border: 1px solid #CCC;
-	-webkit-box-shadow: 0 1px 1px #ddd inset, 0 1px 0 #FFF;
-	-moz-box-shadow: 0 1px 1px #ddd inset, 0 1px 0 #FFF;
-	box-shadow: 0 1px 1px #ddd inset, 0 1px 0 #FFF;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-        color: #999;
-	
-	font: 16px Lucida Sans, Trebuchet MS, Tahoma, sans-serif;
-	height: 20px;
-	padding: 10px;
-	width: 320px;
-}
-
-.form-wrapper .boiteinput:focus {
-	border-color: #aaa;
-	-webkit-box-shadow: 0 1px 1px #bbb inset;
-	-moz-box-shadow: 0 1px 1px #bbb inset;
-	box-shadow: 0 1px 1px #bbb inset;
-	outline: 0;
-}
-
-.form-wrapper .boiteinput:-moz-placeholder,
-.form-wrapper .boiteinput:-ms-input-placeholder,
-.form-wrapper .boiteinput::-webkit-input-placeholder {
-	color: #999;
-	font-weight: normal;
-}
-
-
-
-
-
-
         body {
-            padding-top: 60px;
-            padding-bottom: 40px;
-            padding-left: 20px;
-            padding-right: 20px;
-
-           
+            background: #eee;
+            font-size: 10px;
         }
+            a {
+                text-decoration: none;
+                color: #2A679F;
+               
+            }
 
-        nombre {
+
+            .form-wrapper {
+                background-color: #f6f6f6;
+                background-image: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#eae8e8));
+                background-image: -webkit-linear-gradient(top, #f6f6f6, #eae8e8);
+                background-image: -moz-linear-gradient(top, #f6f6f6, #eae8e8);
+                background-image: -ms-linear-gradient(top, #f6f6f6, #eae8e8);
+                background-image: -o-linear-gradient(top, #f6f6f6, #eae8e8);
+                background-image: linear-gradient(top, #f6f6f6, #eae8e8);
+                border-color: #dedede #bababa #aaa #bababa;
+                border-style: solid;
+                border-width: 1px;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                border-radius: 10px;
+                -webkit-box-shadow: 0 3px 3px rgba(255,255,255,.1), 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 5px #444;
+                -moz-box-shadow: 0 3px 3px rgba(255,255,255,.1), 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 5px #444;
+                box-shadow: 0 3px 3px rgba(255,255,255,.1), 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 5px #444;
+                margin: 20px auto;
+                overflow: hidden;
+                padding: 8px;
+                width: 350px;
+            }
+
+            .form-wrapper .boiteinput {
+                border: 1px solid #CCC;
+                -webkit-box-shadow: 0 1px 1px #ddd inset, 0 1px 0 #FFF;
+                -moz-box-shadow: 0 1px 1px #ddd inset, 0 1px 0 #FFF;
+                box-shadow: 0 1px 1px #ddd inset, 0 1px 0 #FFF;
+                -webkit-border-radius: 3px;
+                -moz-border-radius: 3px;
+                border-radius: 3px;
+                color: #999;
+
+                font: 16px Lucida Sans, Trebuchet MS, Tahoma, sans-serif;
+                height: 20px;
+                padding: 10px;
+                width: 320px;
+            }
+
+            .form-wrapper .boiteinput:focus {
+                border-color: #aaa;
+                -webkit-box-shadow: 0 1px 1px #bbb inset;
+                -moz-box-shadow: 0 1px 1px #bbb inset;
+                box-shadow: 0 1px 1px #bbb inset;
+                outline: 0;
+            }
+
+            .form-wrapper .boiteinput:-moz-placeholder,
+                .form-wrapper .boiteinput:-ms-input-placeholder,
+                .form-wrapper .boiteinput::-webkit-input-placeholder {
+                color: #999;
+                font-weight: normal;
+            }
+
+
+
+
+
+
+            body {
+                padding-top: 60px;
+                padding-bottom: 40px;
+                padding-left: 20px;
+                padding-right: 20px;
+
+
+            }
+
+            nombre {
 
                 text-shadow:    0 1px 0 #ccc,
-                                0 2px 0 #c9c9c9,
-                                0 3px 0 #bbb,
-                                0 4px 0 #b9b9b9,
-                                0 5px 0 #aaa,
-                                0 6px 1px rgba(0,0,0,.1),
-                                0 0 5px rgba(0,0,0,.1),
-                                0 1px 3px rgba(0,0,0,.3),
-                                0 3px 5px rgba(0,0,0,.2),
-                                0 5px 10px rgba(0,0,0,.25),
-                                0 10px 10px rgba(0,0,0,.2),
-                                0 20px 20px rgba(0,0,0,.15);
-            
-        }
+                    0 2px 0 #c9c9c9,
+                    0 3px 0 #bbb,
+                    0 4px 0 #b9b9b9,
+                    0 5px 0 #aaa,
+                    0 6px 1px rgba(0,0,0,.1),
+                    0 0 5px rgba(0,0,0,.1),
+                    0 1px 3px rgba(0,0,0,.3),
+                    0 3px 5px rgba(0,0,0,.2),
+                    0 5px 10px rgba(0,0,0,.25),
+                    0 10px 10px rgba(0,0,0,.2),
+                    0 20px 20px rgba(0,0,0,.15);
 
-        .flat-table {
-            margin-bottom: 20px;
-            border-collapse:collapse;
-            font-family: 'Lato', Calibri, Arial, sans-serif;
-            border: none;
-            border-radius: 3px;
-            -webkit-border-radius: 3px;
-            -moz-border-radius: 3px;
-        }
-        .flat-table th, .flat-table td {
-            box-shadow: inset 0 -1px rgba(0,0,0,0.25), 
-                inset 0 1px rgba(0,0,0,0.25);
-        }
-        .flat-table th {
-            font-weight: normal;
-            -webkit-font-smoothing: antialiased;
-            padding: 1em;
-            color: rgba(0,0,0,0.45);
-            text-shadow: 0 0 1px rgba(0,0,0,0.1);
-            font-size: 1.5em;
-        }
-        .flat-table td {
-            color: #f7f7f7;
-            padding: 0.7em 1em 0.7em 1.15em;
-            text-shadow: 0 0 1px rgba(255,255,255,0.1);
-            font-size: 1.4em;
-        }
-        .flat-table tr {
-            -webkit-transition: background 0.3s, box-shadow 0.3s;
-            -moz-transition: background 0.3s, box-shadow 0.3s;
-            transition: background 0.3s, box-shadow 0.3s;
-        }
-        .flat-table-1 {
-            background: #336ca6;
-        }
-        .flat-table-1 tr:hover {
-            background: rgba(0,0,0,0.19);
-        }
-        .flat-table-2 tr:hover {
-            background: rgba(0,0,0,0.1);
-        }
-        .flat-table-2 {
-            background: #f06060;
-        }
-        .flat-table-3 {
-            background: #52be7f;
-        }
-        .flat-table-3 tr:hover {
-            background: rgba(0,0,0,0.1);
-        }
+            }
 
-
+            .flat-table {
+                margin-bottom: 20px;
+                border-collapse:collapse;
+                font-family: 'Lato', Calibri, Arial, sans-serif;
+                border: none;
+                border-radius: 3px;
+                -webkit-border-radius: 3px;
+                -moz-border-radius: 3px;
+            }
+            .flat-table th, .flat-table td {
+                box-shadow: inset 0 -1px rgba(0,0,0,0.25), 
+                    inset 0 1px rgba(0,0,0,0.25);
+            }
+            .flat-table th {
+                font-weight: normal;
+                -webkit-font-smoothing: antialiased;
+                padding: 1em;
+                color: rgba(0,0,0,0.45);
+                text-shadow: 0 0 1px rgba(0,0,0,0.1);
+                font-size: 1.5em;
+            }
+            .flat-table td {
+                color: #f7f7f7;
+                padding: 0.7em 1em 0.7em 1.15em;
+                text-shadow: 0 0 1px rgba(255,255,255,0.1);
+                font-size: 1.4em;
+            }
+            .flat-table tr {
+                -webkit-transition: background 0.3s, box-shadow 0.3s;
+                -moz-transition: background 0.3s, box-shadow 0.3s;
+                transition: background 0.3s, box-shadow 0.3s;
+            }
+            .flat-table-1 {
+                background: #336ca6;
+            }
+            .flat-table-1 tr:hover {
+                background: rgba(0,0,0,0.19);
+            }
+            .flat-table-2 tr:hover {
+                background: rgba(0,0,0,0.1);
+            }
+            .flat-table-2 {
+                background: #f06060;
+            }
+            .flat-table-3 {
+                background: #52be7f;
+            }
+            .flat-table-3 tr:hover {
+                background: rgba(0,0,0,0.1);
+            }
 
 
 
 
 
 
-    </style>
-    <link href="{{ asset('siteweb/css/bootstrap-responsive.css')}}" rel="stylesheet">
+
+
+        </style>
+        <link href="{{ asset('siteweb/css/bootstrap-responsive.css')}}" rel="stylesheet">
 
 
 
 
-</head>
-<body>
+    </head>
+    <body>
 
-    {% block menu %}
-        {% include ":blocs:menu.html.twig" %}
-    {% endblock %}
+        {% block menu %}
+            {% include ":blocs:menu.html.twig" %}
+        {% endblock %}
 
-    {% block body %}
+        {% for flashMessage in app.session.flashbag.get('error') %}
+            <div class="flash-notice">
+                {{flashmessage}}
+            </div>
+        {% endfor %}    
 
-    {% endblock %}
+        {% block body %}
 
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script type="text/javascript" src="{{ asset('siteweb/jquery-ui/jquery-ui.min.js')}}"></script>
-    <script type="text/javascript" src="{{ asset('siteweb/Toggle_Switch/lc_switch.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('siteweb/datetimepicker-master/jquery.datetimepicker.js') }}"></script>
 
-{% block javascripts %}
-    
-    <script type="text/javascript">
-$(document).ready(function(e) {
-	$('.lcs_check').lc_switch();
 
-	// triggered each time a field changes status
-	$('body').delegate('.lcs_check', 'lcs-statuschange', function() {
-		var status = ($(this).is(':checked')) ? 'checked' : 'unchecked';
-		console.log('field changed status: '+ status );
-	});
-	
-	
-	// triggered each time a field is checked
-	$('body').delegate('.lcs_check', 'lcs-on', function() {
-		console.log('field is checked');
-	});
-	
-	
-	// triggered each time a is unchecked
-	$('body').delegate('.lcs_check', 'lcs-off', function() {
-		console.log('field is unchecked');
-	});
-        
-        $('.MonDateTimePicker').datetimepicker();
-});             
-    </script>
-    
-{% endblock %}
 
-</body>
+        {% endblock %}
+
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script type="text/javascript" src="{{ asset('siteweb/jquery-ui/jquery-ui.min.js')}}"></script>
+        <script type="text/javascript" src="{{ asset('siteweb/Toggle_Switch/lc_switch.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('siteweb/datetimepicker-master/jquery.datetimepicker.js') }}"></script>
+
+        {% block javascripts %}
+
+            <script type="text/javascript">
+                $(document).ready(function (e) {
+                    $('.lcs_check').lc_switch();
+
+                    // triggered each time a field changes status
+                    $('body').delegate('.lcs_check', 'lcs-statuschange', function () {
+                        var status = ($(this).is(':checked')) ? 'checked' : 'unchecked';
+                        console.log('field changed status: ' + status);
+                    });
+
+
+                    // triggered each time a field is checked
+                    $('body').delegate('.lcs_check', 'lcs-on', function () {
+                        console.log('field is checked');
+                    });
+
+
+                    // triggered each time a is unchecked
+                    $('body').delegate('.lcs_check', 'lcs-off', function () {
+                        console.log('field is unchecked');
+                    });
+
+                    $('.MonDateTimePicker').datetimepicker();
+                });
+            </script>
+
+        {% endblock %}
+
+    </body>
 </html>
